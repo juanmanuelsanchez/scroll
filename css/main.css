@@ -11,7 +11,7 @@ body {
   /*background-color: #007069;*/
   background-color: #1d1d1d;
   font-family: 'Lato', sans-serif;
-  color: #ffffff;
+  /*color: #ffffff;*/
   font-weight: 400;
   line-height: 1.6;
   margin: 2em;
@@ -63,7 +63,6 @@ td.aditz-forma {
   background-color: #122b40;
   border-bottom: #122b40;
   color: #ffffff;
-  /*height: 49px;*/
   padding: 0.5em 1em;
   -webkit-box-shadow: 2px 2px 2px 2px #000043;
   -moz-box-shadow: 2px 2px 2px 2px #000043;
@@ -92,9 +91,6 @@ td.aditz-forma:hover {
 td.izenordea-col,
 th.izenordea-col {
   background-color: #001f3f;
-  /*border: 1px solid white;*/
-  border-bottom: #122b40;
-  /*height: 54px;*/
   color: #ffffff;
   padding: 0.5em 1em;
   -webkit-box-shadow: 2px 2px 2px 2px #000043;
@@ -136,7 +132,6 @@ li:hover, li:active {
 th.ertzeko-col,
 td.ertzeko-col {
   background-color: #f00;
-  /*border: 1px solid white;*/
   color: #ffffff;
   height: 37px;
   -webkit-box-shadow: 2px 2px 2px 2px #000043;
@@ -232,6 +227,12 @@ td.ertzeko-col {
 
 }
 
+#aditza {
+
+
+
+}
+
 #aditzIzena,
 #deklinabideIzena {
 
@@ -292,13 +293,13 @@ td.ertzeko-col {
 }
 #leftColumn  td {
 
-  max-width: 25%;
+  max-width: 20%;
 
 }
 
 #leftColumn th {
 
-  max-width: 25%;
+  max-width: 20%;
 
 }
 
@@ -368,13 +369,16 @@ td.ertzeko-col {
 
   .table-fixed-left {
 
-    max-width: 25%;
+    margin-left: 0;
+    padding-left: 0;
+    max-width: 20%;
+
 
   }
 
   .table-fixed-right {
 
-    max-width: 75%;
+    max-width: 80%;
   }
 
   .title {
@@ -449,7 +453,9 @@ margin-bottom: 20px;
 
   .table-fixed-left {
 
-   max-width: 100%;
+    max-width: 100%;
+
+
 
   }
 
