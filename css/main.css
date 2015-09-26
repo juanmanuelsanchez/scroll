@@ -61,13 +61,16 @@ h3 {
 
 td.aditz-forma {
   background-color: #122b40;
+  border-bottom: #122b40;
   color: #ffffff;
+  /*height: 49px;*/
   padding: 0.5em 1em;
   -webkit-box-shadow: 2px 2px 2px 2px #000043;
   -moz-box-shadow: 2px 2px 2px 2px #000043;
   box-shadow: 2px 2px 2px 2px #000043;
   text-align: center;
   opacity:0.3;
+
 
 }
 
@@ -85,16 +88,23 @@ td.aditz-forma:hover {
 
 }
 
-th,
+
 td.izenordea-col,
 th.izenordea-col {
   background-color: #001f3f;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
+  border-bottom: #122b40;
+  /*height: 54px;*/
   color: #ffffff;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 2px 2px 2px 2px #000088;
-  -moz-box-shadow: 2px 2px 3px 2px #000088;
-  box-shadow: 2px 2px 2px 2px #000088;
+  -webkit-box-shadow: 2px 2px 2px 2px #000043;
+  -moz-box-shadow: 2px 2px 2px 2px #000043;
+  box-shadow: 2px 2px 2px 2px #000043;
+  text-align: center;
+
+
+
+
 }
 
 input {
@@ -126,11 +136,15 @@ li:hover, li:active {
 th.ertzeko-col,
 td.ertzeko-col {
   background-color: #f00;
-  border: 1px solid white;
-  box-shadow: 2px 2px #000088;
+  /*border: 1px solid white;*/
   color: #ffffff;
+  height: 37px;
+  -webkit-box-shadow: 2px 2px 2px 2px #000043;
+  -moz-box-shadow: 2px 2px 2px 2px #000043;
+  box-shadow: 2px 2px 2px 2px #000043;
   text-align: center;
-  width: 1%;
+
+
 }
 
 
@@ -168,13 +182,24 @@ td.ertzeko-col {
   background-color: rgb(48, 48, 50);
 }
 
-.izenordea-col {
-  text-align: center;
-  border: 1px solid white;
-  width: 1%;
-  box-shadow: 2px 2px 2px 2px #000088;
+
+.table-fixed-left {
+
+  float: left;
+  margin-right: 0;
+  padding-right: 0;
+
 }
 
+.table-fixed-right {
+
+  float: right;
+  margin-left: 0;
+  padding-left: 0;
+
+
+
+}
 
 .table {
 
@@ -265,6 +290,26 @@ td.ertzeko-col {
   font-size: 0.7em;
   padding-bottom: 5px;
 }
+#leftColumn  td {
+
+  max-width: 25%;
+
+}
+
+#leftColumn th {
+
+  max-width: 25%;
+
+}
+
+#rightColumn td {
+
+
+}
+#rightColumn th {
+
+
+}
 
 #oharra,#oharra:hover {
 
@@ -298,10 +343,15 @@ td.ertzeko-col {
 
 @media only screen and (min-width: 320px) {
 
+
+
   td.aditz-forma:hover {
 
-    background-color:#122b40;
+    background-color: #122b40;
+
   }
+
+
 
   .aditz-title,.aditz-title:hover {
 
@@ -314,6 +364,17 @@ td.ertzeko-col {
   box-shadow: 0.3em 0.3em 0.8em #444444;
   margin-bottom: 0;
 
+  }
+
+  .table-fixed-left {
+
+    max-width: 25%;
+
+  }
+
+  .table-fixed-right {
+
+    max-width: 75%;
   }
 
   .title {
@@ -353,9 +414,12 @@ td.ertzeko-col {
 
 @media only screen and (min-width: 768px) {
 
+
+
   td.aditz-forma:hover {
 
     background-color: #2A4053;
+
   }
 
   .aditz-title,.aditz-title:hover {
@@ -382,6 +446,18 @@ margin-bottom: 20px;
 
 
 }
+
+  .table-fixed-left {
+
+   max-width: 100%;
+
+  }
+
+  .table-fixed-right {
+
+    max-width: 100%;
+  }
+
 
   #singularra,
   #plurala {
