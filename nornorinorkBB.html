@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nor-Nori-Nork scrollTable</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="libs/02jquery.min.js"></script>
+  <script src="libs/03jquerymobile.js"></script>
+  <script src="libs/05bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" data-role="page" data-theme="b">
+  <div class="row">
+    <h1 class="title col-xs-12">Nor-Nori-Nork</h1>
+  </div>
+  <div class="row">
+    <div id="header"  class="text-left" data-role="collapsible" data-collapsed="true" data-theme="b">
+      <h3 class="subtitle col-md-6">Paradigmak</h3>
+      <ul id="paradigmakList" data-bind="foreach: aditzak2" data-role="listview" class="col-md-6">
+        <li id="listItem"  data-bind="text: izenburua, click: $parent.setCurrentAditza2"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row" id="aditzIzena" data-bind="with: currentAditza2, animationOne:currentAditza2">
+    <h3 class="col-xs-12" data-bind="text:izenburua"></h3>
+  </div>
+  <div class="row" id="aditza" data-bind="with: currentAditza2,animationOne:currentAditza2">
+    <div class="table-responsive table-fixed-left col-xs-2">
+      <table class="table" id="leftColumn">
+        <thead>
+          <tr>
+            <th class="ertzeko-col">Batuera</th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: paradigma">
+          <tr data-bind="foreach: leftColumn">
+            <td class="izenordea-col" data-bind="html:$data,animationTwo:$data"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-responsive table-fixed-right col-xs-10">
+      <table class="table" id="rightColumn">
+        <thead>
+          <tr data-bind="foreach: koadrokoGoikoHeaderBatua">
+            <th class="izenordea-col" data-bind="html:$data"></th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: paradigma">
+          <tr data-bind="foreach: lerroaBatua">
+            <td class="aditz-forma" data-bind="html:$data,animationTwo:$data"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-responsive table-fixed-left col-xs-2">
+      <table class="table" id="leftColumn2">
+        <thead>
+        <tr>
+          <th class="ertzeko-col">Bizkaiera</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: paradigma">
+        <tr data-bind="foreach: leftColumn">
+          <td class="izenordea-col" data-bind="html:$data,animationTwo:$data"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-responsive table-fixed-right col-xs-10">
+      <table class="table" id="rightColumn2">
+        <thead>
+        <tr data-bind="foreach: koadrokoGoikoHeaderBizkaiera">
+          <th class="izenordea-col" data-bind="html:$data"></th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: paradigma">
+        <tr data-bind="foreach: lerroaBizkaiera">
+          <td class="aditz-forma" data-bind="html:$data,animationTwo:$data"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row" id="buttons">
+    <button type="button" class="col-xs-4 btn btn-default btn-sm text-left" id="left">
+      <span class="glyphicon glyphicon-align-left"></span>Left
+    </button>
+    <button type="button" class="col-xs-4 btn btn-default btn-sm" id="center">
+      <span class="glyphicon glyphicon-align-center"></span>center
+    </button>
+    <button type="button" class="col-xs-4 btn btn-default btn-sm text-right" id="right">
+      <span class="glyphicon glyphicon-align-right"></span>Right
+    </button>
+  </div>
+  <div class="row" id="footer" >
+    <h3 class="col-xs-12"><span style="color:orangered">Iturria:</span>&nbsp;&nbsp;Barrutia,&nbsp;&nbsp;Eneko:&nbsp;&nbsp;<i>Goi-Mailarako Ikasbidea.</i></h3>
+  </div>
+</div>
+<script>
+  $(document).ready(function (){
+
+    var pos = -370;
+
+    $("div.table-responsive").scrollLeft(0);
+
+    $("#right").click(function (){
+
+      $("div.table-responsive").animate({scrollLeft: '+=370'},1000);
+      pos = 370;
+    });
+
+    $("#center").click(function (){
+
+      /*if(pos == -370) {
+       $("div.table-responsive").animate({scrollLeft: '+=185'}, 1000);
+       }
+       if (pos == 370) {
+
+       $("div.table-responsive").animate({scrollLeft: '-=185'}, 1000);
+       }*/
+
+      //$("div.table-responsive").scrollLeft(185);
+
+      //It's possible to give a specific point rather than an increment or decrement
+      $("div.table-responsive").animate({scrollLeft: '185'}, 1000);
+
+
+      pos = 185;
+    });
+
+    $("#left").click(function (){
+
+      $("div.table-responsive").animate({scrollLeft: '-=370'},1000);
+
+      pos = -370;
+
+    });
+
+  });
+</script>
+<script src="scripts/01knockout.min.js"></script>
+<script src="scripts/laguntzailea/nornorinorkBB.js"></script>
+</body>
+</html>
