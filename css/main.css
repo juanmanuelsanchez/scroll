@@ -291,23 +291,33 @@ td.ertzeko-col {
   font-size: 0.7em;
   padding-bottom: 5px;
 }
-#leftColumn  td {
+
+#header {
+
+
+
+}
+#leftColumn  td,
+#leftColumn2 td {
 
   max-width: 20%;
 
 }
 
-#leftColumn th {
+#leftColumn th,
+#leftColumn2 th {
 
   max-width: 20%;
 
 }
 
-#rightColumn td {
+#rightColumn td,
+#rightColumn2 td {
 
 
 }
-#rightColumn th {
+#rightColumn th,
+#rightColumn2 th {
 
 
 }
@@ -371,14 +381,14 @@ td.ertzeko-col {
 
     margin-left: 0;
     padding-left: 0;
-    max-width: 20%;
+    max-width: 25%;
 
 
   }
 
   .table-fixed-right {
 
-    max-width: 80%;
+    max-width: 75%;
   }
 
   .title {

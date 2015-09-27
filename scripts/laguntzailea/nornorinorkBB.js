@@ -27,21 +27,20 @@
       "goikoAditzMota": "Batueraz",
       "behekoAditzMota": "Bizkaieraz",
       "oharra": " ",
-      "koadrokoGoikoHeaderBatua": ["Batueraz", "Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Haiei"],
-      "koadrokoGoikoHeaderBizkaiera": ["Bizkaieraz", "Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Hareei"],
+      "koadrokoGoikoHeaderBatua": ["Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Haiei"],
+      "koadrokoGoikoHeaderBizkaiera": ["Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Hareei"],
       "paradigma": [
 
         {
-          lerroaBatua: ["Nik", " ", "diat<br\><i>dinat</i>", "diot",  " ", "dizut", " dizuet", "diet"],
-          lerroaBizkaiera: ["Nik", " ", "deuat<br\><i>deunat</i>", "deutsat",  " ", "deutsut", " deutsuet", "deutset"]
-
+          leftColumn: ["Nik<br\>&nbsp;&nbsp;&nbsp;"],
+          lerroaBatua: [" ", "diat<br\><i>dinat</i>", "diot",  " ", "dizut", " dizuet", "diet"],
+          lerroaBizkaiera: [" ", "deuat<br\><i>deunat</i>", "deutsat",  " ", "deutsut", " deutsuet", "deutset"]
 
         },
         {
-
-          lerroaBatua: ["Hik", "didak"," ", "diok", "diguk", " ", " ", "diek"],
-          lerroaBizkaiera:["Hik", "deutsak"," ", "deutsak", "deuskuk", " ", " ", "deutsek"]
-
+          leftColumn: ["Hik"],
+          lerroaBatua: ["didak"," ", "diok", "diguk", " ", " ", "diek"],
+          lerroaBizkaiera:["deutsak"," ", "deutsak", "deuskuk", " ", " ", "deutsek"]
 
         }
       ]
@@ -53,21 +52,21 @@
       "goikoAditzMota": "Batueraz",
       "behekoAditzMota": "Bizkaieraz",
       "oharra": " ",
-      "koadrokoGoikoHeaderBatua": ["Batueraz", "Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Haiei"],
-      "koadrokoGoikoHeaderBizkaiera": ["Bizkaieraz", "Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Hareei"],
+      "koadrokoGoikoHeaderBatua": ["Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Haiei"],
+      "koadrokoGoikoHeaderBizkaiera": ["Niri", "Hiri", "Hari", "Guri", "Zuri", "Zuei", "Hareei"],
       "paradigma": [
 
         {
-          lerroaBatua: ["Nik", " ", "nian", "nion",  " ", "nizun", "nizuen", "nien"],
-          lerroaBizkaiera: ["Nik", " ", "neuan", "neutsan",  " ", "neutsun", "neutsuen", "neutsen"]
+          leftColumn: ["Nik"],
+          lerroaBatua: [" ", "nian", "nion",  " ", "nizun", "nizuen", "nien"],
+          lerroaBizkaiera: [" ", "neuan", "neutsan",  " ", "neutsun", "neutsuen", "neutsen"]
 
 
         },
         {
-
-          lerroaBatua: ["Hik", "hidan"," ", "hion", "higun", " ", " ", "hien"],
-          lerroaBizkaiera:["Hik", "heustan"," ", "heutsan", "heuskun", " ", " ", "heutsen"]
-
+          leftColumn: ["Hik"],
+          lerroaBatua: ["hidan"," ", "hion", "higun", " ", " ", "hien"],
+          lerroaBizkaiera:["heustan"," ", "heutsan", "heuskun", " ", " ", "heutsen"]
 
         }
       ]
@@ -90,6 +89,7 @@
     this.paradigma = ko.observable(data.paradigma);
     this.koadrokoGoikoHeaderBatua = ko.observable(data.koadrokoGoikoHeaderBatua);
     this.koadrokoGoikoHeaderBizkaiera = ko.observable(data.koadrokoGoikoHeaderBizkaiera);
+    this.leftColumn = ko.observable(data.paradigma.leftColumn);
     this.lerroaBatua = ko.observable(data.paradigma.lerroaBatua);
     this.lerroaBizkaiera = ko.observable(data.paradigma.lerroaBizkaiera);
 
