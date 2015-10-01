@@ -199,7 +199,6 @@ td.ertzeko-col {
 .table {
 
   box-shadow: 0.3em 0.3em 0.8em #444444;
- 
 
 }
 
@@ -372,7 +371,7 @@ td.ertzeko-col {
 
   .table {
   
-  box-shadow: 0.3em 0.3em 0.8em #444444;
+  box-shadow: 0.3em 0.3em 0.3em 0.8em #444444;
   margin-bottom: 0;
 
   }
@@ -523,7 +522,7 @@ margin-bottom: 20px;
 
   #norantzPlurala {
 
-    text-indent: 0px;
+    text-indent: 0;
   }
 
   #norainoSingularra {
@@ -598,6 +597,17 @@ margin-bottom: 20px;
   #nortzatPlurala {
 
     text-indent: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 980px) {
+
+
+  div#buttons {
+
+    display: none;
+
   }
 
 }
